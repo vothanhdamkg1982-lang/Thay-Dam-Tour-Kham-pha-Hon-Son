@@ -111,4 +111,9 @@ const GALLERY_IMAGES = [
         caption: 'Lặn biển ngắm san hô-Chèo thuyền Kayak',
         category: 'activity'
     }
+       ,{
+        url: 'https://images2.thanhnien.vn/zoom/736_460/528068263637045248/2025/12/25/z736396951470253a7d07442654172182d2524ea4c0b53-17666501304761939846049-320-0-1920-2560-crop-17666505042181988640140.jpg',
+        caption: 'Góc nhìn từ trên cao Hòn Sơn',
+        category: 'activity'
+    }
 ];
