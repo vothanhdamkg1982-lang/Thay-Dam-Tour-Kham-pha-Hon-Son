@@ -1,0 +1,353 @@
+/* ===========================================================
+   KHO ẢNH & KHO VIDEO - STYLE RIÊNG
+   File này chỉ áp dụng cho gallery.html và videos.html
+   =========================================================== */
+
+/* ===== PAGE HEADER (banner nhỏ đầu trang con) ===== */
+.page-banner {
+    background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%);
+    padding: 140px 0 60px;
+    text-align: center;
+    color: #fff;
+}
+.page-banner h1 {
+    font-size: 2.6rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+.page-banner h1 span {
+    color: #f39c12;
+}
+.page-banner p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.05rem;
+}
+.page-banner .breadcrumb {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+.page-banner .breadcrumb a {
+    color: #f39c12;
+    text-decoration: none;
+}
+.page-banner .breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* ===== FILTER BAR (dùng chung cho ảnh & video) ===== */
+.filter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+.filter-btn {
+    padding: 10px 24px;
+    border: 2px solid #e9ecef;
+    background: #fff;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+.filter-btn:hover {
+    border-color: #f39c12;
+    color: #e67e22;
+}
+.filter-btn.active {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(243, 156, 18, 0.35);
+}
+
+.media-count {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+.media-count strong {
+    color: #e67e22;
+}
+
+/* ===== KHO ẢNH - LƯỚI ẢNH ===== */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 22px;
+    padding: 10px 0 80px;
+}
+.photo-card {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    height: 220px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    background: #eee;
+}
+.photo-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+.photo-card:hover img {
+    transform: scale(1.08);
+}
+.photo-card .photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 14px 16px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all 0.3s ease;
+}
+.photo-card:hover .photo-caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+.photo-card .zoom-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.photo-card:hover .zoom-icon {
+    opacity: 1;
+}
+
+/* ===== LIGHTBOX (xem ảnh full) ===== */
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 15, 25, 0.94);
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+.lightbox-overlay.open {
+    display: flex;
+    animation: fadeIn 0.25s ease;
+}
+.lightbox-content {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 78vh;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+.lightbox-caption {
+    color: #fff;
+    margin-top: 18px;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+.lightbox-counter {
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 6px;
+    font-size: 0.85rem;
+}
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.25s ease;
+}
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: #f39c12;
+}
+.lightbox-close {
+    top: -50px;
+    right: 0;
+    width: 42px;
+    height: 42px;
+    font-size: 1.2rem;
+}
+.lightbox-prev,
+.lightbox-next {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+}
+.lightbox-prev {
+    left: -70px;
+}
+.lightbox-next {
+    right: -70px;
+}
+
+/* ===== KHO VIDEO - LƯỚI VIDEO ===== */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 28px;
+    padding: 10px 0 80px;
+}
+.video-card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+.video-card:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+}
+.video-frame-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    cursor: pointer;
+    overflow: hidden;
+}
+.video-frame-wrap img.video-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+.video-frame-wrap:hover img.video-thumb {
+    transform: scale(1.06);
+}
+.video-frame-wrap iframe,
+.video-frame-wrap video {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+.video-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(243, 156, 18, 0.9);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+.video-frame-wrap:hover .video-play-btn {
+    background: #f39c12;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+.video-card-body {
+    padding: 16px 18px;
+}
+.video-card-body h4 {
+    font-size: 1.02rem;
+    color: #1a2a3a;
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+.video-card-body .video-tag {
+    display: inline-block;
+    background: #fef9e7;
+    color: #e67e22;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 3px 12px;
+    border-radius: 20px;
+}
+
+/* ===== EMPTY STATE ===== */
+.media-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: #aab2b8;
+}
+.media-empty i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #e9ecef;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .page-banner {
+        padding: 110px 0 45px;
+    }
+    .page-banner h1 {
+        font-size: 1.9rem;
+    }
+    .photo-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 14px;
+    }
+    .photo-card {
+        height: 150px;
+    }
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .lightbox-prev {
+        left: 5px;
+    }
+    .lightbox-next {
+        right: 5px;
+    }
+    .lightbox-close {
+        top: 5px;
+        right: 5px;
+    }
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}

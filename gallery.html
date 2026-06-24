@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kho Ảnh - Thầy Đậm Tourist | Hòn Sơn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media-gallery.css" />
+</head>
+<body>
+    <!-- ===== FLOATING CONTACT ===== -->
+    <div class="floating-contact">
+        <a href="tel:0942775343" class="phone" title="Gọi ngay"><i class="fas fa-phone"></i></a>
+        <a href="https://zalo.me/0942775343" class="zalo" title="Chat Zalo" target="_blank"><i class="fas fa-comment"></i></a>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header id="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-umbrella-beach"></i>
+                    Thầy<span>Đậm</span>
+                </a>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav>
+                    <ul id="navMenu">
+                        <li><a href="index.html#about">Về tôi</a></li>
+                        <li><a href="index.html#intro">Giới thiệu</a></li>
+                        <li><a href="gallery.html">Kho ảnh</a></li>
+                        <li><a href="videos.html">Kho video</a></li>
+                        <li><a href="index.html#itinerary">Lịch trình</a></li>
+                        <li><a href="index.html#prices">Bảng giá</a></li>
+                        <li><a href="index.html#menu">Thực đơn</a></li>
+                        <li><a href="index.html#contact">Liên hệ</a></li>
+                        <li><a href="index.html#contact" class="nav-cta">Đặt tour ngay</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== PAGE BANNER ===== -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Kho <span>Hình Ảnh</span></h1>
+            <p>Toàn bộ hình ảnh thực tế về Hòn Sơn - cảnh đẹp, ẩm thực, lưu trú và hoạt động trong tour</p>
+            <div class="breadcrumb"><a href="index.html">Trang chủ</a> / Kho ảnh</div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY CONTENT ===== -->
+    <section class="gallery-page">
+        <div class="container">
+            <div class="filter-bar" id="galleryFilterBar"></div>
+            <p class="media-count" id="mediaCount"></p>
+            <div class="photo-grid" id="photoGrid"></div>
+        </div>
+    </section>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <div class="lightbox-overlay" id="lightboxOverlay">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
+            <button class="lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
+            <img id="lightboxImg" src="" alt="">
+            <button class="lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
+            <p class="lightbox-caption" id="lightboxCaption"></p>
+            <p class="lightbox-counter" id="lightboxCounter"></p>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-umbrella-beach"></i>
+                        Thầy<span>Đậm</span>
+                    </a>
+                    <p style="margin-top:10px;">
+                        Du lịch Thầy Đậm - <strong>Chia sẻ yêu thương</strong>
+                    </p>
+                    <p style="margin-top:10px; font-size:0.9rem;">
+                        <i class="fas fa-phone" style="color:#f39c12;"></i> 0942.775.343 &nbsp;|&nbsp;
+                        <i class="fas fa-map-pin" style="color:#f39c12;"></i> Ấp Thiên Tuế - Đặc khu Kiên Hải - An Giang
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Về chúng tôi</h4>
+                    <ul>
+                        <li><a href="index.html#about">Về tôi</a></li>
+                        <li><a href="index.html#intro">Giới thiệu</a></li>
+                        <li><a href="gallery.html">Kho ảnh</a></li>
+                        <li><a href="videos.html">Kho video</a></li>
+                        <li><a href="index.html#itinerary">Lịch trình</a></li>
+                        <li><a href="index.html#prices">Bảng giá</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Hỗ trợ</h4>
+                    <ul>
+                        <li><a href="index.html#policies">Chính sách trẻ em</a></li>
+                        <li><a href="index.html#policies">Chính sách phòng</a></li>
+                        <li><a href="index.html#contact">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Thầy Đậm Tourist. All rights reserved.</p>
+                <p style="margin-top:5px;">Thiết kế bởi <strong style="color:#f39c12;">Thầy Đậm Tourist</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data/gallery-data.js"></script>
+    <script src="js/gallery.js"></script>
+    <script>
+        // Header scroll + mobile menu (dùng chung logic nhỏ, không cần load toàn bộ main.js)
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
+        function toggleMenu() {
+            document.getElementById('navMenu').classList.toggle('open');
+        }
+        document.querySelectorAll('#navMenu a').forEach(link => {
+            link.addEventListener('click', function () {
+                document.getElementById('navMenu').classList.remove('open');
+            });
+        });
+    </script>
+</body>
+</html>
