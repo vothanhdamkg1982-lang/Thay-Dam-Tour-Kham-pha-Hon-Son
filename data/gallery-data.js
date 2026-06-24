@@ -121,4 +121,14 @@ const GALLERY_IMAGES = [
         caption: 'Đá con rùa năm xưa',
         category: 'activity'
     }
+    ,{
+        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7XHMx7PYRNDDdkvH6Y9x3t1j8AQvWj1qSwc-8fOZXcA&s=10',
+        caption: 'Đỉnh Ông Rồng',
+        category: 'activity'
+    }
+     ,{
+        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbkDNUCpic5prV-zghiTq1iZrYTlLCLp5cKV7qTKa3TS8-VN4gZLRCsBCv&s=10',
+        caption: 'Đường xuyên đảo Hòn Sơn',
+        category: 'activity'
+    }
 ];
