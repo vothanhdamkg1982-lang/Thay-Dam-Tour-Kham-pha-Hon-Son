@@ -116,4 +116,9 @@ const GALLERY_IMAGES = [
         caption: 'Góc nhìn từ trên cao Hòn Sơn',
         category: 'activity'
     }
+     ,{
+        url: 'https://cdn3.ivivu.com/2023/03/Hon-Son-Kien-Giang.jpg',
+        caption: 'Đá con rùa năm xưa',
+        category: 'activity'
+    }
 ];
