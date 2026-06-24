@@ -131,4 +131,24 @@ const GALLERY_IMAGES = [
         caption: 'Đường xuyên đảo Hòn Sơn',
         category: 'activity'
     }
+    ,{
+        url: 'https://vetauphuquocexpress.com/wp-content/uploads/2023/11/ma-thien-lanh.jpg.webp',
+        caption: 'Đỉnh Ma Thiên Lãnh - Hòn Sơn',
+        category: 'activity'
+    }
+     ,{
+        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxv6W3MhaqZ-UP1kleeZnJDrsr6G2jBdKHjWWR71m2_lrneMGIWgeC5WIh&s=10',
+        caption: 'Thác nước Hòn Sơn',
+        category: 'activity'
+    }
+     ,{
+        url: 'https://namduexplorer.com/wp-content/uploads/2020/02/%C4%90%C6%B0%E1%BB%9Dng-L%C3%AAn-%C4%90%E1%BB%89nh-Y%C3%AAn-Ng%E1%BB%B1a-H%C3%B2n-S%C6%A1n.jpg',
+        caption: 'Đỉnh Yên Ngựa - Hòn Sơn',
+        category: 'activity'
+    }
+    ,{
+        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAd0oMwRC7pR2iWvyHivJT8yxMdJq2aZwtqsqxSayDPA&s',
+        caption: 'Hồ nước Hòn Sơn',
+        category: 'activity'
+    }
 ];
